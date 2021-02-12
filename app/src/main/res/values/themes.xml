@@ -13,4 +13,17 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="calcStyleVerOne">
+        <item name="android:textStyle">italic</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textColor">@color/design_default_color_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:textSize">@dimen/newThemeTextSize</item>
+        <item name="android:layout_margin">@dimen/newThemeMargin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/newThemePadding</item>
+    </style>
 </resources>
