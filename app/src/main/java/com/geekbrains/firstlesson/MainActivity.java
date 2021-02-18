@@ -2,15 +2,19 @@ package com.geekbrains.firstlesson;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.google.android.material.textview.MaterialTextView;
 
 
 public class MainActivity extends AppCompatActivity  {
 
     private CalcLogic calcLogic;
     private TextView operationField;
+    private MaterialTextView settings;
 
 
     @Override
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity  {
         };
         calcLogic = new CalcLogic();
         operationField = findViewById(R.id.OperationField);
+        settings = findViewById(R.id.settings);
 
         View.OnClickListener numberClickListener = v -> {
             calcLogic.onNumberClick(v.getId());
@@ -60,5 +65,17 @@ public class MainActivity extends AppCompatActivity  {
         for (int i = 0; i <actionID.length ; i++) {
             findViewById(actionID[i]).setOnClickListener(actionClickListener);
         }
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettingScreen();
+            }
+        });
     }
+    private void openSettingScreen(){
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
+
 }

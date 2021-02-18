@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Simple_Calc_ver.0.1</string>
     <string name="hint_text">12345</string>
+    <string name="settings">Настройки</string>
+    <string name="switch_settings">Поменять тему</string>
+    <string name="light">light theme</string>
+    <string name="dark">dark theme</string>
+    <string name="base">base theme</string>
 </resources>
